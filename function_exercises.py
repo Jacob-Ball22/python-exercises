@@ -7,13 +7,12 @@ def is_two(x):
     #Otherwise, any other answer returns false
     else:
         return False
-    
-print(is_two(3))
 #-------------------
 #variable 'vowels' sets up the list of vowels to be used for checking
-vowels = {'a', 'e', 'i', 'o', 'u'}
+
 #is_vowel defines string as the only parameter
 def is_vowel(string):
+    vowels = {'a', 'e', 'i', 'o', 'u'}
     #if condition checks if string is found in vowels
     if string in vowels:
         #if found in vowels it returns True
@@ -21,13 +20,12 @@ def is_vowel(string):
     #if not found in vowels it returns False
     else:
         return False
-    
-print(is_vowel('a'))
+
 #-------------------
 #variable 'vowels' sets up the list of vowels to be used for checking
-vowels = {'a', 'e', 'i', 'o', 'u'}
 #is_consonant defines string as the only parameter
 def is_consonant(string):
+    vowels = {'a', 'e', 'i', 'o', 'u'}
     #checks if string is not included in vowels
     if string not in vowels:
         #if not then it returns True
@@ -39,9 +37,10 @@ def is_consonant(string):
 print(is_consonant('b'))
 #-------------------
 #variable 'vowels' sets up the list of vowels to be used for checking
-vowels = {'a', 'e', 'i', 'o', 'u'}
+
 #capitalize defines string as the only parameter
 def capitalize(string):
+    vowels = {'a', 'e', 'i', 'o', 'u'}
     #finds if first letter of string is not in vowels
     if string[0] not in vowels:
         #the cap variable takes the first letter and capitalizes it
@@ -49,7 +48,7 @@ def capitalize(string):
         cap = string[0].upper() + string[1:]
         #returns cap variable back
         return cap
-print(capitalize('bob'))
+
 #-------------------
 #calculate_tip defines percentage and bill_total as the parameters
 def calculate_tip(percentage, bill_total):
@@ -58,7 +57,7 @@ def calculate_tip(percentage, bill_total):
     #returns the bill and percent amount to give the total amount of the bill with tip
     return (bill_total + tip_amount)
 
-print(calculate_tip(0.25, 100))
+
 #-------------------
 #apply_discount defines original and discount_percent as the parameters
 def apply_discount(original, discount_percent):
@@ -67,7 +66,7 @@ def apply_discount(original, discount_percent):
     #returns the original amount with the discount applied
     return (original - after_discount)
 
-print(apply_discount(100, 0.25))
+
 #-------------------
 #handle_commas defines str_num as the parameter
 def handle_commas(str_num):
@@ -85,7 +84,6 @@ def handle_commas(str_num):
     #returns the value of new_str as an integer
     return int(new_str)
 
-print(handle_commas("2,000"))
 #-------------------
 #get_letter_grade defines num as the parameter
 def get_letter_grade(num):
@@ -104,13 +102,12 @@ def get_letter_grade(num):
     #if not any of the others then returns 'F'
     else:
         return 'F'
-    
-print(get_letter_grade(85))
+
 #-------------------
 #variable 'vowels' sets up the list of vowels to be used for checking
-vowels = {'a', 'e', 'i', 'o', 'u'}
 #remove_vowels defines string_with_vowels as the parameter
 def remove_vowels(string_with_vowels):
+    vowels = {'a', 'e', 'i', 'o', 'u'}
     #sets no_vowel_string as blank to be added to later
     no_vowel_string = ""
     #loops through every index of the parameter
@@ -123,7 +120,7 @@ def remove_vowels(string_with_vowels):
             no_vowel_string += i
     return no_vowel_string
             
-print(remove_vowels("Happy Birthday!"))
+
 #-------------------
 #normalize_name defines identifier as the parameter
 def normalize_name(identifier):
@@ -157,7 +154,6 @@ def normalize_name(identifier):
     #returns the string if there were no underscores in the beginning or end
     return python_identifier.lower()
 
-print(normalize_name("% Completed "))
 #-------------------
 #cumulative_sum defines list_num as the parameter
 def cumulative_sum(list_num):
@@ -176,4 +172,3 @@ def cumulative_sum(list_num):
     #returns the final answer
     return final_list
 
-print(cumulative_sum([1,2,3,4]))
