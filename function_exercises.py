@@ -69,6 +69,7 @@ def apply_discount(original, discount_percent):
 
 #-------------------
 #handle_commas defines str_num as the parameter
+#handle_commas defines str_num as the parameter
 def handle_commas(str_num):
     #starts a blank string
     new_str = ''
@@ -78,11 +79,17 @@ def handle_commas(str_num):
         if i == ',':
             #continue skips to the next i without adding to new_str
             continue
+        if i == '$':
+            continue
         else:
             #adds to new_str if part of string is not a comma
             new_str += i
+    if '.' in new_str:
+        return float(new_str)
+    else:
     #returns the value of new_str as an integer
-    return int(new_str)
+        return int(new_str)
+
 
 #-------------------
 #get_letter_grade defines num as the parameter
